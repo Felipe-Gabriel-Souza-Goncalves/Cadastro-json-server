@@ -3,12 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/home.css">
     <title>Document</title>
 </head>
 <body>
     <header>
         <h2 id="texto">Olá</h2>
-        <img src="" alt="">
+        <div id="informacaoDeLogin">
+            <div id="containerUsuario">
+
+                <div id="informacaoUsuario" style="display: flex; align-items: center; scale: 1.5;">
+                        <img src="img/usuario.svg" alt="">
+                        <h3 id="nicknameUsuario">Anônimo</h3>
+                </div>
+    
+                <div id="popUp"><h1>AAAAAA</h1></div>
+            </div>
+
+            <h3 id="sairLogar" onclick="sairConta()">Logar</h3>
+        </div>
+
     </header>
 
     <script src="scripts/home.js"></script>

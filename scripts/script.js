@@ -1,11 +1,19 @@
 console.log('página foi reiniciada')
 
+
+var logado = false
+localStorage.setItem("logado", logado)
+
+
 function pegarDados(){
+
+
     var nome = document.getElementById('usuario').value
     var email = document.getElementById('email').value
     var senha = document.getElementById('senha').value
 
     if(nome.length <=3 || email <=3 || email.indexOf("@") == -1 || senha.length <= 3){
+        anonimo = false
         return 0
     }
     
@@ -30,6 +38,8 @@ function confirmarDados(){
         return 0
     }
     else{
+        logado = true
+        localStorage.setItem("logado", logado)
         location.href="home.html"
     }
 }
@@ -38,6 +48,8 @@ function irLocalStorage(nome, email, senha){
     localStorage.setItem("nome", nome);
     localStorage.setItem("email", email)
     localStorage.setItem("senha", senha)
+
+
 
 }
 
