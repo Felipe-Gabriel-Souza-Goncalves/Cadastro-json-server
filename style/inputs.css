@@ -1,0 +1,9 @@
+&.inputErro{
+    animation: inputErro 1s;
+}
+@keyframes inputErro {
+    0%{margin-left: -8px;}
+    25%{margin-left: 8px;}
+    75%{margin-left: -8px;}
+    100%{margin-left: 0px;}
+}

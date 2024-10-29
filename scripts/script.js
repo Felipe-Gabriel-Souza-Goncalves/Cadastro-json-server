@@ -1,19 +1,17 @@
-console.log('página foi reiniciada')
-
-
+const inputUsuario = document.getElementById('usuario')
+const inputEmail = document.getElementById('email')
+const inputSenha =  document.getElementById('senha')
 var logado = false
 localStorage.setItem("logado", logado)
 
-
 function pegarDados(){
-
-
     var nome = document.getElementById('usuario').value
     var email = document.getElementById('email').value
     var senha = document.getElementById('senha').value
 
     if(nome.length <=3 || email <=3 || email.indexOf("@") == -1 || senha.length <= 3){
-        anonimo = false
+        inputUsuario.classList.add("inputErro")
+        console.log(inputUsuario)
         return 0
     }
     

@@ -3,16 +3,20 @@
     padding: 0;
     margin: 0;
     color: aliceblue;
+    
 }
 body{
     width: 100%;
     height: 100vh;
+    max-width: 100vw;
     display: flex;
     background: linear-gradient(135deg, rgb(173, 174, 230), rgb(69, 94, 231));
+    flex-direction: column;
+    overflow: hidden;
 }
 header{
     padding: 10px;
-    width: 100%;
+    max-width: 100%;
     height: 10vh;
     display: flex;
     align-items: center;
@@ -28,21 +32,88 @@ header{
         display: flex;
         gap: 50px;
     }
-#sairLogar{
-    padding: 10px 20px;
-    border-radius: 10px;
-    transition: 0.4s;
-}
-#sairLogar:hover{
-    background-color: rgba(19, 19, 117, 0.562);
-}
+        #sairLogar{
+            padding: 10px 20px;
+            border-radius: 10px;
+            transition: 0.4s;
+        }
+        #sairLogar:hover{
+            background-color: rgba(19, 19, 117, 0.562);
+        }
 
 
 #containerUsuario{
     display: flex;
     z-index: 1;
 }
-    #popUp{
-        display: none;
-        z-index: 2;
+
+main{
+    padding: 5% 10%;
+}
+    .container{
+        display: flex;
+    }
+        #divEducacional,
+        #divPessoal{
+            flex-wrap: wrap;
+            width: 40vw;
+            /* border: 2px solid red; */
+        }
+        #divEducacional{
+            border-right: 3px solid rgba(26, 26, 27, 0.39) ;
+            padding-right: 20px;
+            margin-right: 20px;
+        }
+        .exPessoal, 
+        .exEducacional{
+            animation: moverImg 10s infinite ease-in-out;
+        }
+
+        .divTexto{
+            width: 270px;
+            word-break: keep-all;
+        }
+            .imagemEx{
+                float: left;
+                padding-right: 15px;
+                border-radius: 10px;
+            }
+            a, a h2{
+                display: flex;
+                align-items: center;
+                font-size: 2rem;
+                font-weight: 400;
+                gap: 25px;
+            }
+            a img{
+                width: 100px;
+            }
+
+            .exPessoal h2,
+            .exEducacional h2{
+                font-size: 28px;
+                font-weight: 400;
+            }
+            .exPessoal a,
+            .exEducacional a{
+                font-size: 15px;
+                word-wrap: break-word;
+            }
+    @keyframes moverImg{
+        0%{
+            margin-left: 300px;
+            opacity: 0;
+        }
+        10%{
+            margin-left: 0px;
+            opacity: 1;
+        }
+        90%{
+            margin-left: 0px;
+            opacity: 1;
+        }
+        100%{
+            margin-left: -500px;
+            opacity: 0;
+        }
     }
