@@ -12,7 +12,10 @@ body{
     display: flex;
     background: linear-gradient(135deg, rgb(173, 174, 230), rgb(69, 94, 231));
     flex-direction: column;
-    overflow: hidden;
+    overflow-x: hidden;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 header{
     padding: 10px;
@@ -55,26 +58,30 @@ main{
     }
         #divEducacional,
         #divPessoal{
-            flex-wrap: wrap;
             width: 40vw;
-            /* border: 2px solid red; */
+            max-width: 40vw;
         }
         #divEducacional{
             border-right: 3px solid rgba(26, 26, 27, 0.39) ;
-            padding-right: 20px;
+            padding-right: 5%;
             margin-right: 20px;
         }
         .exPessoal, 
         .exEducacional{
             animation: moverImg 10s infinite ease-in-out;
+            min-width: 40vw;
+            flex-wrap: wrap;
         }
 
         .divTexto{
-            width: 270px;
+            width: 100%;
+            clear: both;
+            /* max-width: 20%; */
             word-break: keep-all;
         }
             .imagemEx{
                 float: left;
+                min-width: 500px;
                 padding-right: 15px;
                 border-radius: 10px;
             }
@@ -84,8 +91,9 @@ main{
                 font-size: 2rem;
                 font-weight: 400;
                 gap: 25px;
+                height: 200px;
             }
-            a img{
+            a .imgGithub{
                 width: 100px;
             }
 
@@ -115,5 +123,21 @@ main{
         100%{
             margin-left: -500px;
             opacity: 0;
+        }
+    }
+
+    @media (width < 1250px) {
+        .container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        #divEducacional{
+            border: 0;
+            margin: 0;
+            padding: 0;
+        }
+        .imagemEx{
+            max-width: 80vw;
         }
     }
