@@ -17,4 +17,7 @@ Atualização 28/10 -
     -Animação das caixas dos projetos
     -Links disponíveis para os projetos citados em ambas as contas
 
+Atualização 31/10 - 
 
+    -Progresso na responsividade
+    -Links para projetos com target="_blank"
