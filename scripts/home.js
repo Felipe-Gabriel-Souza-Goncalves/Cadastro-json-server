@@ -10,6 +10,9 @@ function textos(){
         bemVindo.innerHTML = "Olá " + localStorage.getItem('nome') + "!"
         nicknameUsuario.innerHTML = localStorage.getItem("nome")
         sairLogar.innerHTML = "Sair"
+        document.getElementById("nomeSobreUsuario").innerHTML = localStorage.getItem('nome')
+        document.getElementById("emailSobreUsuario").innerHTML = localStorage.getItem('email')
+
 
     }else if (localStorage.getItem("logado") == "false"){
         bemVindo.innerHTML = "Olá anônimo!"
@@ -59,6 +62,19 @@ function displayPessoal(){
     j++
     if(j == exPessoal.length){
         j = 0
+    }
+}
+
+var divUsuarioAtivada = false
+function toggleSobreUsuario(){
+    divUsuarioAtivada = !divUsuarioAtivada
+    if(divUsuarioAtivada == true){
+        document.getElementById("sobreUsuario").style.marginTop = "80px"
+        setTimeout(document.getElementById("sobreUsuario").style.zIndex = "2",1000)
+        
+    } else{
+        document.getElementById("sobreUsuario").style.marginTop = "-300px"
+        setTimeout(document.getElementById("sobreUsuario").style.zIndex = "-1",1000)
     }
 }
 

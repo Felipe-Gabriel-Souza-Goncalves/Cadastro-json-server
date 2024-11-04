@@ -12,7 +12,7 @@
         <div id="informacaoDeLogin">
             <div id="containerUsuario">
 
-                <div id="informacaoUsuario" style="display: flex; align-items: center; scale: 1.5;">
+                <div onclick="toggleSobreUsuario()" id="informacaoUsuario" style="display: flex; align-items: center; scale: 1.5;">
                         <img src="img/usuario.svg" alt="">
                         <h3 id="nicknameUsuario">Anônimo</h3>
                 </div>
@@ -87,6 +87,17 @@
             </div>
         </div>
     </main>
+
+    <div id="sobreUsuario">
+        <h2 id="nomeSobreUsuario">Anônimo</h2>
+        <div class="infoUsuario">
+            <h4 id="emailSobreUsuario">email@email</h4>
+            <a onclick="window.location.href= 'deletarConta.html'" id="textoDeletarConta">DELETAR CONTA</a>
+        </div>
+    </div>
+
+
+
     <!-- <script src="scripts/geral.js"></script> -->
     <script src="scripts/home.js"></script>
 </body>

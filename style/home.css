@@ -107,6 +107,77 @@ main{
                 font-size: 15px;
                 word-wrap: break-word;
             }
+
+
+#sobreUsuario{
+    position: absolute;
+    z-index: -1;
+    /* margin-top: 80px; */
+    margin-top: -300px;
+    margin-left: 80%;
+    width: 300px;
+    padding: 2em 2rem 2rem 2rem;
+    border-radius: 15px;
+    border: 4px double white;
+    background-color: rgba(213, 229, 245, 0.301);
+    font-size: 1.5em;
+    transition: 0.6s;
+}
+    #textoDeletarConta{
+        padding: 0;
+        margin: 0;
+        text-decoration: underline;
+        color: red;
+        height: fit-content;
+        margin-top: 15px;
+        font-size: 0.7em;
+    }
+
+#deletarConta{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+    height: 100vh;
+    width: 100%;
+    font-size: 2.5em;
+    background-color: rgba(58, 96, 110, 0.281);
+    backdrop-filter: blur(15px);
+}
+    #usuarioEmail,
+    #senha1,
+    #senha2{
+        width: 600px;
+        padding: 1em 0.5em;
+        border-radius: 10px;
+        transition: 0.3s;
+        font-size: 1.5rem;
+        margin-top: 1rem;
+        color: darkgray;
+    }
+        #usuarioEmail:focus,
+        #senha1:focus,
+        #senha2:focus{
+            background-color: lightgray;
+            color: black;
+        }
+    #deleteButton{
+        width: 50%;
+        padding: 1rem;
+        border-radius: 10px;
+        border: 0;
+        margin-top: 15px;
+        margin-left: 25%;
+        background-color: darkblue;
+        font-size: 1.5rem;
+        font-weight: 600;
+        transition: 0.3s;
+    }
+        #deleteButton:hover{
+            filter: brightness(1.5);
+        }
     @keyframes moverImg{
         0%{
             margin-left: 300px;
@@ -141,3 +212,4 @@ main{
             max-width: 80vw;
         }
     }
+
