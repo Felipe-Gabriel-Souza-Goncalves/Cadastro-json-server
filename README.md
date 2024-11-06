@@ -1,9 +1,19 @@
-# 1 uso de localStorage
+# Cadastro json-server 
 
-https://felipe-gabriel-souza-goncalves.github.io/1-uso-de-localStorage-/
+https://felipe-gabriel-souza-goncalves.github.io/Cadastro-json-server/
 
-Simulação de cadastro com informações em localStorage 
-Nenhuma informação será guardada, mas evite colocar informações pessoais
+Simulação de cadastro com json-server e localStorage, feito para estudo das tecnologias citadas
+
+AS INFORMAÇÕES SERÃO GUARDADAS DENTRO DE UM JSON
+SERÁ POSSÍVEL APAGAR AS INFORMAÇÕES APÓS COLOCÁ-LAS
+ENTRETANTO, NÃO COLOQUE INFORMAÇÕES PESSOAIS!
+
+Progresso atual do CRUD sobre o cadastro:
+
+Create - FEITO
+Read - FEITO (Somente informações próprias quando logado)
+Update - EM PROGRESSO
+Delete - FEITO
 
 Atualização 30/09/2024 - 
 
@@ -25,3 +35,7 @@ Atualização 31/10/2024 -
 Atualização 03/11/2024 - 
 
     -Opção de deletar conta
+
+Atualização 05/11/2024 - 
+
+    MUDANÇA DO localStorage PARA json-server
