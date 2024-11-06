@@ -27,10 +27,10 @@ document.getElementById('sairLogar').addEventListener("click", () =>{
 })
 
 // var mostrando = false
-document.getElementById('informacaoUsuario').addEventListener("click", () =>{
+// document.getElementById('informacaoUsuario').addEventListener("click", () =>{
 
 
-})
+// })
 
 var i = 0
 var j = 0

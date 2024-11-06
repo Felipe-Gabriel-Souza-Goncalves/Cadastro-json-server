@@ -16,39 +16,35 @@ function pegarDados(){
     }
     
     irLocalStorage(nome, email, senha)
-    location.href = "index.html" 
 }
 
 function confirmarDados(){
     var login = document.getElementById('usuarioLogin').value
     var loginSenha = document.getElementById('senhaLogin').value
 
-    if(!localStorage.getItem("nome")){
-        alert("Não há esse registro")
-        return 0
-    }
-    else if(login != localStorage.getItem("nome") && login != localStorage.getItem("email")){
-        alert("está errado, tente novamente")
-        return 0
-    }
-    else if(loginSenha != localStorage.getItem("senha")){
-        alert("Senha incorreta")
-        return 0
-    }
-    else{
-        logado = true
-        localStorage.setItem("logado", logado)
-        location.href="home.html"
-    }
+    fetch(`http://localhost:3000/usuarios`)
+    .then(resposta => resposta.json())
+    .then(dados =>{
+        
+        dados.forEach(usuario => {
+            if(usuario.nome == login || usuario.email == login && usuario.senha == loginSenha){
+                localStorage.setItem("nome", usuario.nome)
+                localStorage.setItem("email", usuario.email)
+
+                logado = true
+                localStorage.setItem("logado", logado)
+                window.location.href = "home.html"
+            }
+        });
+
+
+    })
+
 }
 
-function irLocalStorage(nome, email, senha){
+function irLocalStorage(nome, email){
     localStorage.setItem("nome", nome);
     localStorage.setItem("email", email)
-    localStorage.setItem("senha", senha)
-
-
-
 }
 
 // localStorage.clear()
