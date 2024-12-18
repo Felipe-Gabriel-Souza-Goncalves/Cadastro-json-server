@@ -1,4 +1,4 @@
-# ATUALIZAÇÕES DO PROJETO - Versão [2.0]
+# ATUALIZAÇÕES DO PROJETO - Versão [2.0.1]
 
 ## [1.1] - Atualização 30/09/2024:
 
@@ -24,3 +24,8 @@
 ## [2.0] - Atualização 05/11/2024: 
 
 - MUDANÇA DO **```localStorage```** PARA **```json-server```**
+
+## [2.0.1] - Atualização 17/12/2024:
+
+- Correção de problemas de responsividade e design na página home.html
+- Exclusão do arquivo duplicado ```style.css```
